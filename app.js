@@ -4,7 +4,7 @@ let amigo;
 
 
 function agregarAmigo(nuevoAmigo) {
- amigo = document.getElementById(amigo);
+ amigo = document.getElementById(amigo); //esto se conecta con la linea 24 del index
 //agregar un nuevo amigo al array
 if (nuevoAmigo !== "") {
     amigos.push(nuevoAmigo);
