@@ -1,6 +1,7 @@
 //Estableciendo el array
 let amigos = [];
 let amigo;
+let intentos = 0;
 
 
 function agregarAmigo(nuevoAmigo) {
@@ -14,5 +15,10 @@ listaAmigos.appendChild(nuevoElementoLista);//agrega el nombre del amigo a la li
 } else { //alert en caso no valido
     alert("Por favor, ingresa un nombre valido")
 }
+intentos++;
+limpiarCaja();
 }
 
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
+}
