@@ -22,6 +22,7 @@ limpiarCaja();
 
 let listaAmigos = [];
 let intentos = 0;
+let amigoSorteado = sortearAmigo ();
 
 function agregarAmigo(nuevoAmigo) {
     if (nuevoAmigo !== ""){
@@ -31,15 +32,23 @@ function agregarAmigo(nuevoAmigo) {
     
     const listaAmigosElement= document.getElementById('listaAmigos'); //obtiene referencia al elemento ul
     listaAmigosElement.appendChild(nuevoElementoLista);
-    } else {
-        alert('Porfavor, ingresa un nombre valido');
+    } else { //en caso no valido
+        alert('Porfavor, inserte un nombre');
     }
     intentos++;
     limpiarCaja();
 }
 
+
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
+} 
+
+/*function sortearAmigo() {
+    if (listaAmigos.length > 0) {
+    return[Math.floor(Math.random()*listaAmigos.length)];
+    if (listaAmigos.includes(listaAmigosElement))
+    alert('Tienes un amigo duplicado'); }
 } 
 
  
