@@ -1,10 +1,9 @@
 //Estableciendo el array
-let amigos = [];
+/*let amigos = [];
 let amigo;
 let intentos = 0;
 
-
-function agregarAmigo(nuevoAmigo) {
+/*function agregarAmigo(nuevoAmigo) {
  amigo = document.getElementById(amigo); //esto se conecta con la linea 24 del index
 //agregar un nuevo amigo al array
 if (nuevoAmigo !== "") {
@@ -17,8 +16,30 @@ listaAmigos.appendChild(nuevoElementoLista);//agrega el nombre del amigo a la li
 }
 intentos++;
 limpiarCaja();
+
+}*/
+
+
+let listaAmigos = [];
+let intentos = 0;
+
+function agregarAmigo(nuevoAmigo) {
+    if (nuevoAmigo !== ""){
+        listaAmigos.push(nuevoAmigo);
+    const nuevoElementoLista= document.createElement("li");
+    nuevoElementoLista.textContent= nuevoAmigo; //crea el elemento li
+    
+    const listaAmigosElement= document.getElementById('listaAmigos'); //obtiene referencia al elemento ul
+    listaAmigosElement.appendChild(nuevoElementoLista);
+    } else {
+        alert('Porfavor, ingresa un nombre valido');
+    }
+    intentos++;
+    limpiarCaja();
 }
 
 function limpiarCaja() {
     document.querySelector('#amigo').value = '';
-}
+} 
+
+ 
